@@ -19,4 +19,8 @@ describe ('#game') do
     game = RPS.new()
     expect(game.wins?("scissors", "paper")).to(eq(true))
   end
+  it ("returns play again if object and argument are the same") do
+    game = RPS.new()
+    expect(game.wins?("scissors", "scissors")).to(eq("play again"))
+  end
 end
